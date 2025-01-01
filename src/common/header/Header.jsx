@@ -4,10 +4,10 @@ import { Icon } from '@iconify/react';
 import Menu from './Menu';
 import CV from '../../../Ali_cv.pdf'
 function Header() {
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState('false');
 
   const downloadCV = () => {
-    const url = CV; 
+    const url = CV;
     const filename = 'Alireza_CV.pdf';
 
     fetch(url)
@@ -31,12 +31,12 @@ function Header() {
   };
 
   const loaddownload = () => {
-    setNumber(1);
+    setNumber('loading');
     setTimeout(() => {
       downloadCV();
-      setNumber(2);
+      setNumber('checked');
       setTimeout(() => {
-        setNumber(0);
+        setNumber('false');
       }, 1000);
     }, 2000);
   };
@@ -50,13 +50,13 @@ function Header() {
       </div>
       <Menu />
       <div className='w-1/4 flex justify-center items-center'>
-        <button onClick={loaddownload} className={`border-${number === 2 ? '[green]' : '[#ff8700]'} py-1 px-3 border rounded-xl text-[#c9c8c6]`}>
+        <button onClick={loaddownload} className={`border border-${number === 'checked' ? 'green-900 border-2' : '[#ff8700]'} py-1 px-3 rounded-xl text-[#c9c8c6]`}>
           <span className='font-sans font-semibold text-xl flex justify-center items-center gap-1'>
             Download CV
             <Icon className='header-icon'
-              icon={number === 0 ? "line-md:download-outline-loop" :
-                number === 1 ? "line-md:downloading-loop" : "line-md:check-all"}
-              style={{ color: number === 2 ? "#46ff2e" : "#ffbb29", fontSize: '30px' }}
+              icon={number === 'false' ? "line-md:download-outline-loop" :
+                number === 'loading' ? "line-md:downloading-loop" : "line-md:check-all"}
+              style={{ color: number === 'checked' ? "#46ff2e" : "#ffbb29", fontSize: '30px' }}
             />
           </span>
         </button>
@@ -65,4 +65,4 @@ function Header() {
   )
 }
 
-export default Header
+export default Header;

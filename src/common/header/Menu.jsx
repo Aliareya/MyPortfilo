@@ -12,9 +12,9 @@ function Menu() {
         { title: 'Home', icone: null  , navigate : '/'},
         { title: 'About', icone: null , navigate : '/about'},
         { title: 'Resume', icone: null , navigate : '/resome'},
-        { title: 'Contact Us', icone: null , navigate : '/contact'},
+        { title: 'Projects', icone: null, navigate : '/projects' },
         { title: '|', icone: null , navigate :null},
-        { title: '93783376973', icone: 'line-md:phone-call-loop', navigate : null }
+        { title: 'Contact Us', icone: null , navigate : '/contact'},
     ])
     return (
         <div className='w-1/2 flex items-center justify-end gap-9 pr-2 '>
