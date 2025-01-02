@@ -42,7 +42,7 @@ function Header() {
   };
 
   return (
-    <div className='w-full h-28 bg-[#181818] border-b-[#ff8700] border-b flex sticky top-0 '>
+    <div className='z-50 w-full h-28 bg-[#181818] border-b-[#ff8700] border-b flex sticky top-0 '>
       <div className='w-1/4 flex justify-center items-center'>
         <div className='w-1/2 h-14 ml-10'>
           <img src={logo} alt="logo" />
