@@ -1,10 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
-v{
-    background-image: url();
-}
 .home-imag{
     background-image: url(./images/myphoto.jpg);
     background-position: center;
@@ -13,4 +11,10 @@ v{
     width: 290px;
     height:290px;
     border-radius: 50%;
+}
+.bg-primary{
+    background-color: #1b1b1b;
+}
+body{
+    font-family: 'Merriweather', serif;
 }
