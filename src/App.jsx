@@ -8,16 +8,21 @@ import About from "./pages/About";
 import Resome from "./pages/Resome";
 import Skill from "./pages/Skill";
 import Progect from './pages/Progect';
+import { useState } from "react";
+
 
 function App() {
+  // Global Varibles For Site
+  const [showNavbar , setShowNavbar] = useState(true)
+  
   return (
     <BrowserRouter>
       <div className="w-full h-screen bg-black flex">
-        <div className="navebar w-[15%] h-screen bg-[#1b1b1b]">
-          <Navbar />
+        <div className={`${showNavbar ?'w-[15%] navbar_animation' : 'w-[5%] navbar_animation'} h-screen bg-[#1b1b1b]`}>
+          <Navbar showNavbar={showNavbar} />
         </div>
-        <div className="w-[85%] h-screen">
-          <Topbar />
+        <div className={`${showNavbar ?'w-[85%] navbar_animation' : 'w-[95%] navbar_animation'} h-screen`}>
+          <Topbar setShowNavbar={setShowNavbar} showNavbar={showNavbar} />
           <div className="w-full h-[665px]">
             <Routes>
               <Route path="/" element={<Home />} />

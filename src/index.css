@@ -3,18 +3,17 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
-.home-imag{
-    background-image: url(./images/myphoto.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 290px;
-    height:290px;
-    border-radius: 50%;
-}
 .bg-primary{
     background-color: #1b1b1b;
 }
-body{
+body {
     font-family: 'Merriweather', serif;
+    position: relative;
+    transition: width 10s linear; 
 }
+
+
+.navbar_animation{
+    transition: all 500ms ease-out;
+}
+  
