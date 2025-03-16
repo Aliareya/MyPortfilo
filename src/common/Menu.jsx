@@ -21,11 +21,11 @@ function Menu({ showNavbar }) {
       link: "/resome",
       select: false,
     },
-    { title: "Skills", icon: "cib:skillshare", link: "/skill", select: false },
+    { title: "Progect", icon: "cib:skillshare", link: "/progect", select: false },
     {
-      title: "Project",
+      title: "Contact Us",
       icon: "mdi:facebook-workplace",
-      link: "/progect",
+      link: "/contact",
       select: false,
     },
   ]);

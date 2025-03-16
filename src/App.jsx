@@ -6,8 +6,8 @@ import Navbar from "./navbar/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Resome from "./pages/Resome";
-import Skill from "./pages/Skill";
-import Progect from './pages/Progect';
+import Progect from "./pages/Progect";
+import Contact from './pages/Contact';
 import { useState } from "react";
 
 
@@ -28,8 +28,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/resome" element={<Resome />} />
-              <Route path="/skill" element={<Skill />} />
               <Route path="/progect" element={<Progect />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </div>
         </div>
